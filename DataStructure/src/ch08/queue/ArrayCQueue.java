@@ -8,8 +8,8 @@ public class ArrayCQueue implements Queue {
 	private char itemArray[];
 	
 	public ArrayCQueue(int queueSize){
-		front = 0;
-		rear = 0;
+		front = 0;	// 시작점 0
+		rear = 0;	// 시작점 0
 		this.queueSize = queueSize;
 		itemArray = new char[this.queueSize];
 	}
