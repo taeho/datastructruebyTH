@@ -1,5 +1,10 @@
 package ch07.stack;
 
+/*
+ * 순차 자료구조 방식을 이용하여 구현한 스택프로그램
+ * 
+ * */
+
 public class ArrayStack implements Stack {
 	
 	private int top;
@@ -29,6 +34,7 @@ public class ArrayStack implements Stack {
 		if(isFull()){
 			System.out.println("Interesting fail Array Stack is Full");
 		} else {
+			// overflow가 아니면 stack의 top이 가리키는 위치에 x 삽입
 			itemArray[++top] = item;
 			System.out.println("Insert Item : " + item);
 		}
@@ -41,6 +47,7 @@ public class ArrayStack implements Stack {
 			System.out.println("Deleting Fail! Array Stack is empty!! ");
 			return 0;
 		} else {
+			// 
 			return itemArray[top--];
 		}
 	}
