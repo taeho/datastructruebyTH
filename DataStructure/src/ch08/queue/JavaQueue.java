@@ -1,5 +1,9 @@
 package ch08.queue;
 
+/*
+ *ÀÚ¹Ù Å¥
+ * */
+
 public class JavaQueue {
 
 	public static void main(String[] args) {

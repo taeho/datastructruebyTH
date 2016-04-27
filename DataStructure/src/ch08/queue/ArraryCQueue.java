@@ -30,10 +30,13 @@ public class ArraryCQueue implements Queue {
 	@Override
 	public void enQueue(char item) {
 		// TODO Auto-generated method stub
-		if(isFull())
+		if(isFull())	// 포화상태 체크
 			System.out.println("Inserting fail! Circular Queue is Full!!");
 		else {
-			rear = (rear+1) % this.queueSize;
+			rear = (rear+1) % this.queueSize;	
+			// 나머지연산자 %, 예를 들어 크기가 4인 원형 큐에서 현재 rear의 위치가 2이면, (2+1)mod4=3
+			// 이 되고, 삽입할 다음 위치는 cQ[3]이 되고, 현재 rear의 위치가 3이라면 (3+1)mode4=0
+			// 이 되어, 삽입할 다음 위치는 cQ[0]이 된다.
 			itemArray[rear] = item;
 			System.out.println("Insert Item : " + item);
 		}
